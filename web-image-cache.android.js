@@ -142,6 +142,14 @@ function clearCache() {
     com.facebook.drawee.backends.pipeline.Fresco.getImagePipeline().clearCaches();
 }
 exports.clearCache = clearCache;
+function prefetchUrls(urls) {
+    urls.forEach(function (url) {
+        com.facebook.drawee.backends.pipeline.Fresco
+            .getImagePipeline()
+            .prefetchToDiskCache(com.facebook.imagepipeline.request.ImageRequest.fromUri(android.net.Uri.parse(url)), null);
+    });
+}
+exports.prefetchUrls = prefetchUrls;
 function initializeOnAngular() {
     throw new Error("'initializeOnAngular' has been removed from 'nativescript-web-image-cache', see its readme for details!");
 }

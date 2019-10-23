@@ -135,6 +135,10 @@ function clearCache() {
     imageCache.clearDiskOnCompletion(function () { });
 }
 exports.clearCache = clearCache;
+function prefetchUrls(urls) {
+    SDWebImagePrefetcher.sharedImagePrefetcher.prefetchURLs(urls);
+}
+exports.prefetchUrls = prefetchUrls;
 function initializeOnAngular() {
     throw new Error("'initializeOnAngular' has been removed from 'nativescript-web-image-cache', see its readme for details!");
 }

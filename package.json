@@ -50,7 +50,7 @@
   ],
   "license": "MIT(https://github.com/VideoSpike/nativescript-web-image-cache/blob/master/LICENSE)",
   "main": "web-image-cache",
-  "name": "nativescript-web-image-cache",
+  "name": "nativescript-web-image-cache-with-prefetch",
   "nativescript": {
     "platforms": {
       "android": "3.0.0",
@@ -63,5 +63,5 @@
   },
   "scripts": {},
   "typings": "web-image-cache.d.ts",
-  "version": "5.0.0"
+  "version": "25.0.0"
 }

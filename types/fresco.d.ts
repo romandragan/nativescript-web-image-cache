@@ -18,7 +18,9 @@ declare namespace com {
         export class ImagePipeline { }
       }
       export namespace request {
-        export class ImageRequest { }
+        export class ImageRequest {
+          public static fromUri(uri: any): ImageRequest;
+        }
       }
       export namespace image {
         export class ImageInfo { }
